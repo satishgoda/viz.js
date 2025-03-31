@@ -1,7 +1,7 @@
 import { formats, engines } from "@viz-js/viz";
 import { zoomLevels } from "./ImageZoom.jsx";
 
-export default function OutputToolbar({ options, onOptionChange, zoomEnabled, zoom, onZoomChange, onZoomIn, onZoomOut }) {
+export function OutputToolbar({ options, onOptionChange, zoomEnabled, zoom, onZoomChange, onZoomIn, onZoomOut }) {
   return (
     <div className="toolbar output-toolbar">
       <div className="toolbar-item">

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { getExampleNames, defaultExampleName, getExample } from "../examples.js";
 
-export default function EditorToolbar({ onLoadExample, onCopyLink }) {
+export function EditorToolbar({ onLoadExample, onCopyLink }) {
   const [exampleName, setExampleName] = useState(defaultExampleName);
 
   function handleLoadExample() {

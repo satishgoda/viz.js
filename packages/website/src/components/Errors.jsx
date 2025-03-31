@@ -1,4 +1,4 @@
-export default function Errors({ errors }) {
+export function Errors({ errors }) {
   if (errors.length > 0) {
     return (
       <div className="errors">

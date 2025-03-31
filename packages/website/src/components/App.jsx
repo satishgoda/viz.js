@@ -1,13 +1,13 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import { debounce } from "lodash-es";
-import ReloadablePromiseWorker, { TerminatedError } from "../reloadable-promise-worker.js";
+import { ReloadablePromiseWorker, TerminatedError } from "../reloadable-promise-worker.js";
 import { copyLink } from "../links.js";
-import EditorToolbar from "./EditorToolbar.jsx";
-import Editor from "./Editor.jsx";
-import OutputToolbar from "./OutputToolbar.jsx";
-import Output from "./Output.jsx";
-import Errors from "./Errors.jsx";
-import Resize from "./Resize.jsx";
+import { EditorToolbar } from "./EditorToolbar.jsx";
+import { Editor } from "./Editor.jsx";
+import { OutputToolbar } from "./OutputToolbar.jsx";
+import { Output } from "./Output.jsx";
+import { Errors } from "./Errors.jsx";
+import { Resize } from "./Resize.jsx";
 
 const worker = new ReloadablePromiseWorker(() => new Worker(new URL("../worker.js", import.meta.url), { type: "module" }));
 
@@ -21,7 +21,7 @@ function render(src, options) {
     });
 }
 
-export default function App({ initialSrc }) {
+export function App({ initialSrc }) {
   const [src, setSrc] = useState(initialSrc);
   const [debouncedSrc, setDebouncedSrc] = useState(src);
   const [options, setOptions] = useState({ engine: "dot", format: "svg-image" });

@@ -1,6 +1,6 @@
-import ImageZoom from "./ImageZoom.jsx";
+import { ImageZoom } from "./ImageZoom.jsx";
 
-export default function Output({ result, zoom, imageZoomRef, onZoomChange, isValid }) {
+export function Output({ result, zoom, imageZoomRef, onZoomChange, isValid }) {
   let content;
 
   if (result) {

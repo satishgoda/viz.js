@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 let dragging = false;
 let dragOffset;
 
-export default function Resize({ onResize }) {
+export function Resize({ onResize }) {
   function handleMouseDown(e) {
     e.preventDefault();
 

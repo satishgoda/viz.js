@@ -4,7 +4,7 @@ import { EditorState } from "@codemirror/state";
 import { linter } from "@codemirror/lint";
 import { syntaxTree } from "@codemirror/language";
 import { dot as dotLanguageSupport } from "@viz-js/lang-dot";
-import Errors from "./Errors.jsx";
+import { Errors } from "./Errors.jsx";
 
 const syntaxLinter = linter((view) => {
   let diagnostics = [];
@@ -62,7 +62,7 @@ const syntaxLinter = linter((view) => {
   return diagnostics;
 });
 
-const Editor = function Editor({ defaultValue = "", onChange, ref }) {
+export function Editor({ defaultValue = "", onChange, ref }) {
   let editorContainerRef = useRef(null);
   let editorViewRef = useRef(null);
 
@@ -115,5 +115,3 @@ const Editor = function Editor({ defaultValue = "", onChange, ref }) {
     <div className="editor" ref={editorContainerRef}></div>
   );
 }
-
-export default Editor;

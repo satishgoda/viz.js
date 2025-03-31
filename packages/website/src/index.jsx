@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
-import App from "./components/App.jsx";
+import { App } from "./components/App.jsx";
 import { getInputFromSearch } from "./links.js";
 import { getExample, defaultExampleName } from "./examples.js";
 

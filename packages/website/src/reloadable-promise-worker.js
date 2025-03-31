@@ -13,7 +13,7 @@ export class UnexpectedMessageError extends Error {
   }
 }
 
-export default class ReloadablePromiseWorker {
+export class ReloadablePromiseWorker {
   constructor(makeWorker) {
     this.makeWorker = makeWorker;
     this.reloadWorker();

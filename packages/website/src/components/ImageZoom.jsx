@@ -40,7 +40,7 @@ function measureFitZoomLevel(container, dimensions) {
   return Math.min(widthRatio, heightRatio);
 }
 
-const ImageZoom = function ImageZoom({ svg, zoom, onZoomChange, ref }) {
+export function ImageZoom({ svg, zoom, onZoomChange, ref }) {
   const blobURLRef = useRef(null);
   const imageRef = useRef(null);
   const containerRef = useRef(null);
@@ -139,5 +139,3 @@ const ImageZoom = function ImageZoom({ svg, zoom, onZoomChange, ref }) {
     </div>
   );
 }
-
-export default ImageZoom;
