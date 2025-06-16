@@ -1,5 +1,7 @@
 # Changelog
 
+## Unreleased
+
 ## 1.0.5
 
 * Add @lezer/lr as a dependency
