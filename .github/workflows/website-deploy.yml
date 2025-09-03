@@ -26,6 +26,7 @@ jobs:
 
       - name: Install dependencies
         run: npm clean-install
+        working-directory: packages/website
 
       - name: Setup Pages
         id: pages
